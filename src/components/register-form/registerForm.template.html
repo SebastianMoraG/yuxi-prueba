@@ -1,0 +1,53 @@
+<div class="content-register">
+    <form novalidate [formGroup]="userForm" (submit) = 'signUp()'>
+        <div>
+            <div>
+                <input type="email" formControlName="email" placeholder="Email">
+            </div>
+            <div 
+                class="error-msg" 
+                *ngIf="userForm.get('email').hasError('required') && userForm.get('email').touched">
+                *Email es un campo obligatorio.
+            </div>
+            <div 
+                class="error-msg" 
+                *ngIf="userForm.get('email').hasError('minlength') && userForm.get('email').touched">
+                *Minimo 3 caracteres para el email.
+            </div>
+        </div>
+        
+        <div formGroupName="account">
+            <div>
+                <div>
+                    <input type="password" formControlName="password" placeholder="Password">
+                </div>
+                 <div 
+                    class="error-msg" 
+                    *ngIf="userForm.get('account').get('password').hasError('required') && userForm.get('account').get('password').touched">
+                    *Este Campo es Obligatorio.
+                </div>
+            </div>
+            <div>
+                <div>
+                    <input type="password" formControlName="confirm" placeholder="Confirm Password">
+                </div>
+                <div 
+                    class="error-msg" 
+                    *ngIf="userForm.get('account').get('confirm').hasError('required') && userForm.get('account').get('confirm').touched">
+                    *Este Campo es Obligatorio.
+                </div>
+                <div 
+                    class="error-msg" 
+                    *ngIf="userForm.get('account').get('confirm').hasError('notSame') && userForm.get('account').get('confirm').touched">
+                    *Las password son diferentes.
+                </div>
+            </div>            
+        </div>
+        <div class="actions flex-box flex-hcenter">
+            <input type="submit" value="REGISTER" [disabled]="userForm.invalid">
+        </div>
+        <div class="flex-box flex-hcenter">
+            <a (click)="goToLogin()">Return to Login</a>
+        </div>
+    </form>
+</div>

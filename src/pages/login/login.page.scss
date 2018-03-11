@@ -1,0 +1,14 @@
+login-page{
+    background: #3F3F3F;
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 10px 20px 10px;
+        width: 100%;
+        login-form{
+            width: 100%;
+            display: block;
+        }
+    };
+}   

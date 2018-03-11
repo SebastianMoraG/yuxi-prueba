@@ -1,0 +1,43 @@
+@import '../../theme/settings/variables';
+
+login-form{
+    form{    
+        input:not([type="submit"]){
+            border:0;
+            background: white;
+            color: black;
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            border-bottom: 1px solid black;
+            margin-bottom: 50px;
+        }
+        input[type="submit"]{
+            background: green;
+            border: 0;
+            color: white;
+            padding: 8px 45px;
+            border-radius: 34px;
+            font-size: 13px;
+        }
+        input[type="submit"]:disabled{
+            cursor: not-allowed;
+            opacity: 0.3;
+        }
+        .actions{
+            margin-top: 30px;
+        }
+        a, a:visited{
+            padding: 24px;
+            color:blue;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        a:hover{
+            text-decoration: underline;
+            color:#808080;
+        }
+    }
+}
+

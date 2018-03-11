@@ -1,0 +1,18 @@
+<div>
+    <header class="flex-box flex-vcenter">
+    </header>
+    <form novalidate [formGroup]="loginForm" (submit) = 'login()'>
+        <div>
+            <input type="email" formControlName="email"  name="email" placeholder="Email">
+        </div>
+        <div>
+            <input type="password" formControlName="password" name="password" placeholder="Password">
+        </div>
+        <div class="actions flex-box flex-hcenter">
+            <input type="submit" value="LOG IN" [disabled]="loginForm.invalid">
+        </div>
+        <div class="flex-box flex-hcenter">
+            <a (click)="goToSignUp()">Sign Up</a>
+        </div>
+    </form>
+</div>

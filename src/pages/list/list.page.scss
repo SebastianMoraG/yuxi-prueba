@@ -1,0 +1,15 @@
+list-page{
+    .container{
+        padding: 10px 20px;
+        .title{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .item{
+            margin-bottom: 20px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+            padding: 10px;
+            text-transform: uppercase;
+        }
+    }
+}

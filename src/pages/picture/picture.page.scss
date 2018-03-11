@@ -1,0 +1,24 @@
+@import '../../theme/settings/variables';
+
+picture-page{
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        flex-direction: column;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        .action{
+            .icon{
+                margin-right: 10px;
+            }
+            background: $green;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -72,6 +72,10 @@ $colors: (
 
 @import "ionic.theme.default";
 
+@import 'settings/variables';
+@import 'tools/mixins';
+@import 'elements/browser';
+@import 'generic/generales';
 
 // Ionicons
 // --------------------------------------------------

@@ -1,0 +1,12 @@
+<ion-content>
+	<div class="container">
+		<button class="action" (click)="takePicture()">
+			<ion-icon name="camera" class="icon"></ion-icon>
+			Take a picture!
+		</button>
+		<div>
+			<span *ngIf="!base64Image">No picture taken</span>
+			<img *ngIf="base64Image" [src]="base64Image">
+		</div>
+	</div>
+</ion-content>
